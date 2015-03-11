@@ -59,6 +59,14 @@ When the player goes from screen to screen, there is an awesome 1980s-esque scre
     <source src="http://anonymous-function.com/zelda-canvas/media/linkMovementCanvas.m4v">
 </video>
 
+### Collision Detection
+Everything other than the background image lives as a 'body' which is drawn on the canvas. Each body is a rectangle (usually square) and has a center point, width, and height.  It's simple to tell if two bodies are overlapping using the laws of the Cartesian coordinate system. For every iteration of the game loop, I spin over all bodies that need to check for collision.  Based on the types of bodies, I can determine what needs to happen. Examples:
+
+- Did Link collide with a Rupee? Pick it up.
+- Did Link collide with a ShopItem? Pick it up and change rupee count.
+- Did Link collide with an Enemy? Is he swinging the sword the wrong way? Take damage.
+
+
 ## What I Learned
 
 I did not do enough planning to allow myself to fail fast with my first approach.  Planning was for work projects, this was just a video game.
