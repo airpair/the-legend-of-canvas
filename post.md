@@ -28,7 +28,7 @@ The next thing I did was create some enemies.  Each enemy was also represented b
 //Example of Red Octorok
 <div class="sprite enemy red-octorok left" style="top: 88px; left: 144px;" data-enemy="red-octorok" data-hp="1" data-damage="1" data-enemy-type="1" data-x="9" data-y="2"></div>
 ```
-I used a similar array structure to set up <a href="http://anonymous-function.com/zelda/enemyMaps.js" target="_blank">spawn locations</a>. Most of each enemy's state was matained in the DOM, while its logic lived in the JS. Because each element moved and acted independently of another (plus the CSS transitions), collision detection proved to be a complete mess.
+I used a similar array structure to set up <a href="http://anonymous-function.com/zelda/enemyMaps.js" target="_blank">spawn locations</a>. Most of each enemy's state was maintained in the DOM, while its logic lived in the JS. Because each element moved and acted independently of another (plus the CSS transitions), collision detection proved to be a complete mess.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/TiHrZcC7V34" frameborder="0" allowfullscreen></iframe>
 
