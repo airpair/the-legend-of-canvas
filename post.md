@@ -9,9 +9,7 @@ Not knowing anything about making videos games, I decided to jump right in. Any 
 
 First, I set up a viewport with the <a href="http://anonymous-function.com/zelda-canvas/images/overworld_map.png"  target="_blank">overword map</a> as the background. Each screen is 256x176 pixels, so to change the screen I just slid the background-position in CSS accordingly. I tiled up the screen into 16x16 pixel chunks and decided Link should move one quare at a time to simply movement. I made a two-dimensional array for every screen and used truthy values to represent squares Link could enter.  I made a map editor to speed up this intern-worthy process. See <a href="http://anonymous-function.com/zelda-canvas/movement.js" target="_blank">Map Editor Ouput</a>
 
-<video preload="auto" controls style="width: 650px;">
-    <source src="http://anonymous-function.com/zelda-canvas/media/mapEditor.m4v">
-</video>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/qL-t4ESsbyQ" frameborder="0" allowfullscreen></iframe>
 
 Next I worked on the sword cave because that's the first thing any tester or player is going to try. My objectives were:
 
@@ -19,9 +17,7 @@ Next I worked on the sword cave because that's the first thing any tester or pla
 - Add cave sprites (like the old man)
 - Interact with objects (picking up the sword)
  
-<video preload="auto" controls style="width: 650px;">
-    <source src="http://anonymous-function.com/zelda-canvas/media/zeldaDOM.m4v">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-rVzGKE2zYw" frameborder="0" allowfullscreen></iframe>
 
 I was feeling pretty awesome now, but something wasn't quite right with the controls.
 
@@ -34,9 +30,7 @@ The next thing I did was create some enemies.  Each enemy was also represented b
 ```
 I used a similar array structure to set up <a href="http://anonymous-function.com/zelda/enemyMaps.js" target="_blank">spawn locations</a>. Most of each enemy's state was matained in the DOM, while its logic lived in the JS. Because each element moved and acted independently of another (plus the CSS transitions), collision detection proved to be a complete mess.
 
-<video preload="auto" controls style="width: 650px;">
-    <source src="http://anonymous-function.com/zelda-canvas/media/zeldaDOMEnemies.m4v">
-</video>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/TiHrZcC7V34" frameborder="0" allowfullscreen></iframe>
 
 At this point, I rage quit. The gameplay was terrible and if I didn't want to play it why would anyone else?
 
@@ -55,9 +49,7 @@ I kept the "tiled" structure of each screen, that still made the most sense to c
 ### Screen Transitions
 When the player goes from screen to screen, there is an awesome 1980s-esque screen wipe that happens to reveal the next area. I was able to do this easily in the game loop by ignoring controller events while the transition is happening.
 
-<video preload="auto" controls style="width: 650px;">
-    <source src="http://anonymous-function.com/zelda-canvas/media/linkMovementCanvas.m4v">
-</video>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/VMpgfXZp6kA" frameborder="0" allowfullscreen></iframe>
 
 ### Collision Detection
 Everything other than the background image lives as a 'body' which is drawn on the canvas. Each body is a rectangle (usually square) and has a center point, width, and height.  It's simple to tell if two bodies are overlapping using the laws of the Cartesian coordinate system. For every iteration of the game loop, I spin over all bodies that need to check for collision.  Based on the types of bodies, I can determine what needs to happen. Examples:
