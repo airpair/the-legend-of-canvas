@@ -63,7 +63,7 @@ When the player goes from screen to screen, there is an awesome 1980s-esque scre
 
 I did not do enough planning to allow myself to fail fast with my first approach.  Planning was for work projects, this was just a video game.
 
-Canvas isn't scary, it's awesome. While it was intimidating at first, once I break from the DOM mentality things came together very quickly.
+Canvas isn't scary, it's awesome. While it was intimidating at first, once I broke from the DOM mentality things came together very quickly.
 
 ## Link to the Future
 This project has been an absolute blast! I plan to keep going until Nintendo ~~hires~~ sues me.  This is still very much a work in progress, but feel free to <a href="http://anonymous-function.com/zelda-canvas/" target="_blank">try out</a> what I have so far (Desktop Chrome or iOS Chrome recommended -- don't forget to zoom) or check out the <a href="https://github.com/AnonymousFunction/anonymousfunction.github.com/tree/master/zelda-canvas" target="_blank">code on GitHub</a>.  Please keep in mind that most of what's done so far is figuring out how to solve different types of problems in the game.  When you run into problems or missing features, just blow on the cartridge...
