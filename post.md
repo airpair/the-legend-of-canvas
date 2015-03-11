@@ -7,7 +7,7 @@ I love video games.  I love JavaScript. I wanted to learn how to put the two tog
 
 Not knowing anything about making videos games, I decided to jump right in. Any experienced front-end engineer can work some DOM magic, and I figured that's all I had to do. I fired up my old console and started the game.  My plan was to play the game a bunch and figure out how to emulate behavior one screen at a time.
 
-First, I set up a viewport with the <a href="http://anonymous-function.com/zelda-canvas/images/overworld_map.png"  target="_blank">overword map</a> as the background. Each screen is 256x176 pixels, so to change the screen I just slid the background-position in CSS accordingly. I tiled up the screen into 16x16 pixel chunks and decided Link should move one quare at a time to simply movement. I made a two-dimensional array for every screen and used truthy values to represent squares Link could enter.  I made a map editor to speed up this intern-worthy process. See <a href="http://anonymous-function.com/zelda-canvas/movement.js" target="_blank">Map Editor Ouput</a>
+First, I set up a viewport with the <a href="http://anonymous-function.com/zelda-canvas/images/overworld_map.png"  target="_blank">overworld map</a> as the background. Each screen is 256x176 pixels, so to change the screen I just slid the background-position in CSS accordingly. I tiled up the screen into 16x16 pixel chunks and decided Link should move one square at a time to simplify movement. I made a two-dimensional array for every screen and used truthy values to represent squares Link could enter.  I made a map editor to speed up this intern-worthy process. See <a href="http://anonymous-function.com/zelda-canvas/movement.js" target="_blank">Map Editor Ouput</a>.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/qL-t4ESsbyQ" frameborder="0" allowfullscreen></iframe>
 
@@ -28,7 +28,7 @@ The next thing I did was create some enemies.  Each enemy was also represented b
 //Example of Red Octorok
 <div class="sprite enemy red-octorok left" style="top: 88px; left: 144px;" data-enemy="red-octorok" data-hp="1" data-damage="1" data-enemy-type="1" data-x="9" data-y="2"></div>
 ```
-I used a similar array structure to set up <a href="http://anonymous-function.com/zelda/enemyMaps.js" target="_blank">spawn locations</a>. Most of each enemy's state was matained in the DOM, while its logic lived in the JS. Because each element moved and acted independently of another (plus the CSS transitions), collision detection proved to be a complete mess.
+I used a similar array structure to set up <a href="http://anonymous-function.com/zelda/enemyMaps.js" target="_blank">spawn locations</a>. Most of each enemy's state was maintained in the DOM, while its logic lived in the JS. Because each element moved and acted independently of another (plus the CSS transitions), collision detection proved to be a complete mess.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/TiHrZcC7V34" frameborder="0" allowfullscreen></iframe>
 
@@ -55,7 +55,7 @@ When the player goes from screen to screen, there is an awesome 1980s-esque scre
 Everything other than the background image lives as a 'body' which is drawn on the canvas. Each body is a rectangle (usually square) and has a center point, width, and height.  It's simple to tell if two bodies are overlapping using the laws of the Cartesian coordinate system. For every iteration of the game loop, I spin over all bodies that need to check for collision.  Based on the types of bodies, I can determine what needs to happen. Examples:
 
 - Did Link collide with a Rupee? Pick it up.
-- Did Link collide with a ShopItem? Pick it up and change rupee count.
+- Did Link collide with a Shop Item? Pick it up and change rupee count.
 - Did Link collide with an Enemy? Is he swinging the sword the wrong way? Take damage.
 
 
