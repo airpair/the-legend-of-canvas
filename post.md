@@ -35,12 +35,12 @@ At this point, I rage quit. The gameplay was terrible and if I didn't want to pl
 
 ## Switching to Canvas
 
-Most of my inital approach stemmed from not knowing canvas. I wanted to stay in my comfort zone but quickly realized I was going against the grain.  After an obligatory single Google search, I found Mary Rose Beth's <a href="https://vimeo.com/105955605" target="_blank">live-coding demo</a> of a simple Space Invaders clone. This presentation was a fantastic demonstration of core gameplay elements such as game loop, controls, collision detection, and most importantly, drawing to the canvas.
+Most of my initial approach stemmed from not knowing canvas. I wanted to stay in my comfort zone but quickly realized I was going against the grain.  After an obligatory single Google search, I found Mary Rose Beth's <a href="https://vimeo.com/105955605" target="_blank">live-coding demo</a> of a simple Space Invaders clone. This presentation was a fantastic demonstration of core gameplay elements such as game loop, controls, collision detection, and most importantly, drawing to the canvas.
 
 Her examples were easy to follow, which helped alleviate my fears. Building on these core gameplay elements, I worked on prototypes for <a href="http://anonymous-function.com/breakout/" target="_blank">Breakout</a> and <a href="http://anonymous-function.com/asteroids/" target="_blank">Asteroids</a> clones.  They were simple single-level examples, but they helped significantly with learning things like movement, velocity, collision detection, and sprite rotation.
 
 ## Starting Over
-Luckily, I didn't have to start compleletly from scratch.  My viewport and movement map still fit in the plan, and the artwork would work, I just had to split the animated GIFs into separate frames.
+Luckily, I didn't have to start completely from scratch.  My viewport and movement map still fit in the plan, and the artwork would work, I just had to split the animated GIFs into separate frames.
 
 ### Fixing Link's Movement
 I kept the "tiled" structure of each screen, that still made the most sense to control where Link could and couldn't walk. He needed to be able to move freely inside a particular tile, so while his sprite is 16x16 pixels, his collision detection size is smaller. This makes it much easier to move Link around and the player doesn't need the precision of a surgeon.
